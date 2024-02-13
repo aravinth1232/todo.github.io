@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="stye.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    
+<div class="new">
+    <div class="all">
+    <input type="text" name="input" id="todo">
+    <button type="submit" class="but" id="but" onclick="add()">ADD</button>
+  
+    </div>
+    <div id="mydiv">
+        <!-- <h1 class="list" id="list">aaa</h1> -->
+    
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+    body{
+    background-color: rgb(161, 161, 53);
+    margin: 0;
+    padding: 0;
+}
+
+.new{
+    /* border: 2px solid black; */
+    /* width: 100vh; */
+
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    flex-wrap: wrap;
+    margin: 0em 0em 0em 0em;
+}
+.all{
+    /* border: 2px solid black; */
+    /* width: 100vh; */
+
+    
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    flex-wrap: wrap;
+    margin: 2em 0em 0em 0em;
+}
+
+input{
+    font-size: 23px;
+/* border: 2px solid black; */
+
+}
+button{
+    margin-left: 4px;
+    padding: 8px 15px;
+
+
+}
+h1{
+    display: none;
+    font-size: 32px;
+    
+}
+p{
+    font-size: 30px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+    </style>
+
+
+<script>
+    // const btn= document.getElementById("butt");
+// btn.addEventListener("onclick",add);
+
+// const btn= document.querySelector("#but");
+// btn.addEventListener("click",add);
+
+function add(){
+    
+    const i= document.getElementById("todo").value;
+    const para=document.createElement("p")
+    // console.log(i)
+    para.innerText= i;
+
+    document.getElementById("mydiv").appendChild(para);
+    
+ let h=document.getElementById("list")
+ h.style.display="block"
+}
+</script>
+</body>
+</html>
